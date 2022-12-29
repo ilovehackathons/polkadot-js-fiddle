@@ -1,0 +1,96 @@
+{
+  "source": {
+    "hash": "0x8321d18385efa9d19e246d232946062ec17c3bbfa97ce17ab0b05eaa418074b0",
+    "language": "ink! 3.4.0",
+    "compiler": "rustc 1.67.0-nightly"
+  },
+  "contract": {
+    "name": "flipper",
+    "version": "0.1.0",
+    "authors": [
+      "[your_name] <[your_email]>"
+    ]
+  },
+  "V3": {
+    "spec": {
+      "constructors": [
+        {
+          "args": [
+            {
+              "label": "init_value",
+              "type": {
+                "displayName": [
+                  "bool"
+                ],
+                "type": 0
+              }
+            }
+          ],
+          "docs": [
+            "Instantiates a new Flipper contract and initializes",
+            "`value` to `init_value`."
+          ],
+          "label": "new",
+          "payable": false,
+          "selector": "0x9bae9d5e"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [],
+          "docs": [
+            " Flips `value` from `true` to `false` or vice versa."
+          ],
+          "label": "flip",
+          "mutates": true,
+          "payable": false,
+          "returnType": null,
+          "selector": "0x633aa551"
+        },
+        {
+          "args": [],
+          "docs": [
+            " Returns the current state of `value`."
+          ],
+          "label": "get",
+          "mutates": false,
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "bool"
+            ],
+            "type": 0
+          },
+          "selector": "0x2f865bd9"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "value"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "bool"
+          }
+        }
+      }
+    ]
+  }
+}
